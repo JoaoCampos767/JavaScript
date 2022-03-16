@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+
+    <style>
+        body{
+            background-color: blanchedalmond;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Descobrindo sua nacionalidade</h1>
+    Seu Pais: <input type="text" name="txtp" id="txtp">
+    <input type="button" value="Verifica" onclick="calcularNas()">
+    <div id="res">
+
+    <script>
+        function calcularNas(){
+            var txtp = document.getElementById('txtp');
+            var res = document.getElementById('res');
+
+            if(txtp == 'Brasil'){
+                res.innerHTML += '<p>Você é Brasileiro!</p>';
+            } else {
+                res.innerHTML += '<p>Você é Estrangeiro!</p>';    
+            }
+        }
+    </script>
+</body>
+</html>

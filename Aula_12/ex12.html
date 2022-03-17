@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voto</title>
+</head>
+<body>
+    <h1>Quem pode votar</h1>
+    Informe dua idade: <input type="number" name="txti" id="txti">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+
+    <script>
+        function calcular(){
+            var txti = document.getElementById('txti');
+            var val = Number(txti.value);
+            var res = document.getElementById('res');
+            
+            res.innerHTML = `<p>Sua idade é ${val}</p>`
+
+            if(val < 16){
+                res.innerHTML += '<p>Não vota!</p>';
+            } else if(val < 18 || val > 65){
+                res.innerHTML += '<p>Voto opcional!</p>';
+            } else {
+                res.innerHTML += '<p>Voto obrigatório!</p>';
+            }
+        }
+    </script>
+    
+</body>
+</html>
